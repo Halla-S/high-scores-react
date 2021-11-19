@@ -1,38 +1,39 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+.root{
+  font-family: 'Press Start 2P', cursive;
+  font-size: large;
+  border-style: solid;
+  width: 60%;
+  margin: 5% 20%;
   text-align: center;
+  color: lawngreen;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section{
+  border: 10px solid rgb(211, 15, 97);
+  height: 30rem;
+  
+  margin:2rem;
 }
+table{
+  text-align: center;
+  border-style: solid;
+   margin: 5% auto;
+   width: 90%;
+}
+tr td {
+  border-bottom: 1px solid black;
+  margin: 0;
+  padding: 0;
+  height: 5rem;
+  border-left-width: 0;
+  color: rgb(34, 51, 128);
+}
+h2,h1{
+  margin: 3% auto;
+  color: rgb(58, 197, 197);
+}
+/* td:first of type {
+  border-bottom: solid;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */
