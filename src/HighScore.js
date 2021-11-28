@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const HighScore = ({ data }) => {
-  console.log(data);
   const [clicked, setClicked] = useState(false);
   const handler = () => {
     setClicked(!clicked);
@@ -12,18 +11,6 @@ const HighScore = ({ data }) => {
       data=data.map((item) => item.scores.sort((item1, item2) => item2.s - item1.s));
     }
   };
-  console.log(data);
-
-  //   const [myarray,setMyarray]= useState(data);
-  //   const clickHandler=()=>{
-  //    setMyarray((array) => {
-  //      array.map((item) => item.scores.sort((item1, item2) => item1.s - item2.s));
-  //     });
-  //   };
-
-  // data.map((item) => item.scores.sort((item1, item2) => item1.s - item2.s));
-  console.log(data);
-  //console.log(myarray);
   return (
     <div>
       <button onClick={handler}> sort the scores</button>

@@ -40,7 +40,13 @@ button{
   height: 2rem;
   margin-top: 1rem;
   color: aliceblue;
+  font-size: larger;
 }
+button:hover{
+  background: rgb(223, 215, 102);
+  color: rgb(211, 15, 97);
+}
+
 /* td:first of type {
   border-bottom: solid;
 
