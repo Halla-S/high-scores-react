@@ -33,6 +33,14 @@ h2,h1{
   margin: 3% auto;
   color: rgb(58, 197, 197);
 }
+button{
+  background: rgb(211, 15, 97);
+  border-style: none;
+  border-radius: 5px;
+  height: 2rem;
+  margin-top: 1rem;
+  color: aliceblue;
+}
 /* td:first of type {
   border-bottom: solid;
 

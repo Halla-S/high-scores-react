@@ -1,20 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 
-const HighScore = (props) => {
+const HighScore = ({ data }) => {
+  console.log(data);
+  const [clicked, setClicked] = useState(false);
+  const handler = () => {
+    setClicked(!clicked);
+    if (clicked === true) {
+      return data =data.map((item) =>
+        item.scores.sort((item1, item2) => item1.s - item2.s));
+    } else{
+      data=data.map((item) => item.scores.sort((item1, item2) => item2.s - item1.s));
+    }
+  };
+  console.log(data);
+
+  //   const [myarray,setMyarray]= useState(data);
+  //   const clickHandler=()=>{
+  //    setMyarray((array) => {
+  //      array.map((item) => item.scores.sort((item1, item2) => item1.s - item2.s));
+  //     });
+  //   };
+
+  // data.map((item) => item.scores.sort((item1, item2) => item1.s - item2.s));
+  console.log(data);
+  //console.log(myarray);
   return (
     <div>
+      <button onClick={handler}> sort the scores</button>
       <h1>High Scores Per Country</h1>
-      {props.data.map((item) => {
-        let newItem = item.scores;
-        newItem = newItem.sort((item1, item2) => item1.s - item2.s);
-
+      {data.map((item) => {
         return (
           <div className="myDiv">
             <section>
               <h2>{`HIGH SCORES: ${item.name}`}</h2>
               <table className="table">
                 <tbody>
-                  {newItem.map((element) => (
+                  {item.scores.map((element) => (
                     <tr>
                       <td key={0}>{element.n}</td>
                       <td key={1}>{element.s}</td>
